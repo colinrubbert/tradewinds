@@ -1,0 +1,327 @@
+/* HTML Elements */
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Open Sans Condensed", sans-serif;
+}
+
+p {
+  font-family: "Lato", sans-serif;
+}
+
+/* Global Settings */
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.light {
+  font-weight: 300;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+
+/* Navigation */
+header {
+  margin: 0;
+}
+.header-container {
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+nav.branding {
+  display: flex;
+  flex-direction: row;
+}
+
+img.tradewinds-logo {
+  height: 60px;
+  margin-top: 10px;
+}
+
+.brand-title {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 48px;
+  line-height: 48px;
+  font-style: italic;
+  margin-top: 16px;
+  color: #383838;
+}
+
+.desktop-menu {
+  font-family: "Lato", sans-serif;
+  font-size: 24px;
+  line-height: 24px;
+  margin-top: 28px;
+}
+
+.desktop-menu a {
+  text-decoration: none;
+  padding-left: 20px;
+  display: inline-flex;
+}
+
+.link {
+  color: #5a5a5a;
+  transition: transform .5s;
+}
+
+.link:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  color: #ee5f9b;
+}
+
+.mobile-nav-toggle {
+  display: none;
+  width: 50px;
+  height: 25px;
+  margin: 40px 0 0 0;
+  align-items: center;
+  cursor: pointer;
+}
+
+.mobile-nav-toggle:selection,
+.mobile-nav-toggle:-moz-selection {
+  background: transparent;
+}
+
+.mobile-nav-toggle span,
+.mobile-nav-toggle span:before,
+.mobile-nav-toggle span:after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: #383838;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.mobile-nav-toggle span:before {
+  top: 8px;
+}
+
+.mobile-nav-toggle span:after {
+  top: -10px;
+}
+
+.mobile-nav-toggle .is-open span {
+  background: transparent;
+}
+
+.mobile-menu {
+  position: absolute;
+  width: 100%;
+  background: #fff;
+  padding: 80px 0 20px;
+  transform: translateY(-100%);
+  transition: all 0.3s ease-in-out;
+}
+
+.mobile-menu a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 24px;
+  padding-bottom: 10px;
+}
+
+.mobile-menu a:hover {
+  color: #ee5f9b;
+}
+
+/* Content Container */
+.content-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 80vh;
+}
+
+/* Call To Action Section */
+#cta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  margin-left: 10%;
+}
+
+.content-wrapper h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.content-wrapper p {
+  font-size: 18px;
+}
+
+.cta-form {
+  margin-top: 50px;
+}
+
+.cta-form input {
+  box-sizing: border-box;
+  border-radius: 3px;
+  border-style: solid;
+  border-color: #ccc;
+  height: 50px;
+  width: 80%;
+  font-size: 24px;
+  line-height: 24px;
+  padding-left: 10px;
+  color: #ee5f9b;
+}
+
+.cta-form .btn {
+  color: #fff;
+  background-color: #ee5f9b;
+  border: none;
+  padding: 5px;
+  margin-top: 10px;
+  width: 80%;
+  height: 50px;
+  border-radius: 3px;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+
+/* Hero Section */
+#hero {
+  width:50%;
+  background: url(../img/beach.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+/* Footer Section */
+footer {
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+/* ------------------------ */
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+
+  /* Globale Settings */
+  .container {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  /* Navigation */
+
+  .header-container {
+    width: 80%;
+    margin: auto;
+  }
+
+  nav.branding {
+    flex-direction: row;
+  }
+
+  img.tradewinds-logo {
+    height: 40px;
+    margin-top: 20px;
+  }
+
+  .brand-title {
+    font-size: 36px;
+    line-height: 36px;
+    margin-top: 22px;
+  }
+
+  .desktop-menu {
+    display: none;
+    font-size: 18px;
+    line-height: 18px;
+    margin-top: 31px;
+  }
+
+  .mobile-nav-toggle {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mobile-menu.is-open {
+    display: block;
+    transform: translate(0%);
+  }
+
+  /* Content Container */
+  .content-container {
+    flex-direction: column-reverse;
+    height: 100%;
+  }
+
+
+  #cta {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  .content-wrapper {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+  }
+
+  .cta-form input {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  .cta-form .btn {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  /* Hero Section */
+  #hero {
+    width:100%;
+    height: 400px;
+  }
+
+  /* Footer Section */
+
+  footer {
+    margin-top: 20px;
+  }
+
+}
+
+@media screen and (max-width: 568px) {
+
+  .tradewinds-logo {
+    display: none;
+  }
+
+  .cta-form input {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  /* Hero Section */
+  #hero {
+    height: 250px;
+  }
+
+}
