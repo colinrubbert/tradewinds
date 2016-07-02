@@ -20,7 +20,7 @@ $(document).ready(function(){
 
 function total() {
   var basePriceMin = 1350;
-  var basePriceMax = 2250;
+  var basePriceMax = 2750;
   var totalMin = basePriceMin + pageCountMin() + ecSiteMin() + seoSiteMin() + gaSiteMin() + copyEditMin();
   var totalMax = basePriceMax + pageCountMax() + ecSiteMax() + seoSiteMax() + gaSiteMax() + copyEditMax();
   if (!isNaN(totalMin && totalMax)) {
