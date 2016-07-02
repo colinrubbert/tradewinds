@@ -287,8 +287,10 @@ img.tradewinds-logo {
 
 .form-wrapper input[type=text] {
   height: 22px;
+  width: 100px;
   border-radius: 2px;
-  border: 2px solid #ccc;
+  border: none;
+  border-bottom: 2px solid #ccc;
   padding: 2px 0 1px 16px;
   color: #ee5f9b;
   font-size: 20px;
@@ -298,13 +300,14 @@ img.tradewinds-logo {
 
 .form-wrapper input[type=checkbox] {
   -webkit-appearance: none;
-  -moz-appearance: none;
+  -moz-appearance: checkbox;
   appearance: none;
   border-radius: 2px;
   border: 2px solid #ccc;
   height: 22px;
   width: 22px;
   margin: 0 0 -1px 20px;
+  cursor: pointer;
 }
 
 .form-wrapper input[type=checkbox]:checked {
