@@ -1,5 +1,10 @@
 /* HTML Elements */
 
+*, html {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -187,7 +192,7 @@ img.tradewinds-logo {
   color: #ee5f9b;
 }
 
-.cta-form .btn {
+.btn {
   color: #fff;
   background-color: #ee5f9b;
   border: none;
@@ -228,8 +233,8 @@ img.tradewinds-logo {
   color: #ee5f9b;
 }
 
-/* Content Wrapper */
-.content-wrapper {
+/* Calculator Content Wrapper */
+.calculator-content-wrapper {
   display: flex;
   width: 100%;
   flex-direction: row;
@@ -260,8 +265,78 @@ img.tradewinds-logo {
 /* Calculator Container Section */
 #calculator-container {
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 30px;
 }
 
+#calculator-container h3{
+  display: inline-block;
+  font-size: 22px;
+  line-height: 22px;
+}
+
+#calculator-container small {
+  padding-left: 20px;
+}
+
+.form-wrapper {
+  margin-bottom: 10px;
+}
+
+.form-wrapper input[type=text] {
+  height: 22px;
+  border-radius: 2px;
+  border: 2px solid #ccc;
+  padding: 2px 0 1px 16px;
+  color: #ee5f9b;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+.form-wrapper input[type=checkbox] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 2px;
+  border: 2px solid #ccc;
+  height: 22px;
+  width: 22px;
+  margin: 0 0 -1px 20px;
+}
+
+.form-wrapper input[type=checkbox]:checked {
+  border-color: #ee5f9b;
+  color: #ee5f9b;
+  background: url('../img/tick.svg') no-repeat center center;
+  background-size: cover;
+}
+
+.form-wrapper input:focus {
+  outline: none !important;
+  border-color: #ee5f9b;
+}
+
+.min-max-wrapper {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+#minSite,
+#maxSite {
+  margin: 0;
+  width: 40%;
+  height: auto;
+  border: 0;
+  border-bottom: 2px solid #ccc;
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
+}
 
 /* Footer Section */
 footer {
@@ -344,7 +419,7 @@ footer {
     line-height: 18px;
   }
 
-  .cta-form .btn {
+  .btn {
     font-size: 18px;
     line-height: 18px;
   }
@@ -364,6 +439,38 @@ footer {
   .calculator-hero-title {
     font-size: 36px;
     line-height: 36px;
+  }
+
+  /* Calculator Content Wrapper */
+  .calculator-content-wrapper {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  /* Information Container Section */
+  #information-container {
+    width: 100%;
+  }
+
+  #information-container h3 {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  #information-container p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  /* Calculator Container Section */
+  #calculator-container {
+    width: 100%;
+  }
+
+  #calculator-container h3{
+    display: block;
+    font-size: 18px;
+    line-height: 18px;
   }
 
   /* Footer Section */
