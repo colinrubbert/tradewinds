@@ -1,5 +1,6 @@
 $(function() {
   mobileNav();
+  goHome();
 });
 
 //Function to open and close navigation on mobile devices
@@ -11,5 +12,14 @@ function mobileNav() {
     } else {
       $('.mobile-nav-toggle, .mobile-menu').addClass('is-open');
     }
+  });
+}
+
+
+// Go to home
+
+function goHome() {
+  $('.brand-title').on('click', function() {
+    location.href = "/";
   });
 }
