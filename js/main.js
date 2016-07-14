@@ -19,7 +19,7 @@ function mobileNav() {
 // Go to home
 
 function goHome() {
-  $('.brand-title').on('click', function() {
+  $('.tradewinds-logo').on('click', function() {
     location.href = "/";
   });
 }

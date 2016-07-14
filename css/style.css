@@ -42,10 +42,12 @@ p {
   margin-top: 10px;
   width: 80%;
   height: 50px;
+  -ms-border-radius: 3px;
   border-radius: 3px;
   font-size: 24px;
   line-height: 24px;
   cursor: pointer;
+  -ms-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
 
@@ -59,12 +61,15 @@ header {
 }
 .header-container {
   height: 80px;
+  display: -ms-flexbox;
   display: flex;
   flex-direction: row;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
 nav.branding {
+  display: -ms-flexbox;
   display: flex;
   flex-direction: row;
 }
@@ -72,16 +77,12 @@ nav.branding {
 img.tradewinds-logo {
   height: 60px;
   margin-top: 10px;
+  cursor: pointer;
 }
 
-.brand-title {
-  font-family: "Open Sans Condensed", sans-serif;
-  font-size: 48px;
-  line-height: 48px;
-  font-style: italic;
-  margin-top: 16px;
-  color: #383838;
-  cursor: pointer;
+.logo-md,
+.logo-sm {
+  display: none;
 }
 
 .desktop-menu {
@@ -91,15 +92,27 @@ img.tradewinds-logo {
   margin-top: 28px;
 }
 
-.desktop-menu a {
+.desktop-menu ul {
+  margin: 0;
+  list-style: none;
+}
+
+.desktop-menu li {
+  -ms-text-decoration: none;
   text-decoration: none;
   padding-left: 20px;
   display: inline-flex;
 }
 
+.desktop-menu li a {
+  -ms-text-decoration: none;
+  text-decoration: none;
+}
+
 .link {
   color: #5a5a5a;
-  transition: transform .5s;
+  -ms-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .link:hover {
@@ -132,6 +145,7 @@ img.tradewinds-logo {
   width: 100%;
   background: #383838;
   position: relative;
+  -ms-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
@@ -153,15 +167,27 @@ img.tradewinds-logo {
   background: #fff;
   padding: 80px 0 20px;
   transform: translateY(-100%);
+  -ms-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
-.mobile-menu a {
+.mobile-menu ul {
+  margin: 0;
+  padding: 0;
+}
+
+.mobile-menu li {
   display: block;
   text-align: center;
+  -ms-text-decoration: none;
   text-decoration: none;
   font-size: 24px;
   padding-bottom: 10px;
+}
+
+.mobile-menu li a {
+  -ms-text-decoration: none;
+  text-decoration: none;
 }
 
 .mobile-menu a:hover {
@@ -170,6 +196,7 @@ img.tradewinds-logo {
 
 /* Content Container */
 .content-container {
+  display: -ms-flexbox;
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -178,8 +205,10 @@ img.tradewinds-logo {
 
 /* Call To Action Section */
 #cta {
+  display: -ms-flexbox;
   display: flex;
   flex-direction: column;
+  -ms-flex-pack: justify;
   justify-content: center;
   width: 50%;
   margin-left: 10%;
@@ -199,7 +228,7 @@ img.tradewinds-logo {
 }
 
 .cta-form input {
-  box-sizing: border-box;
+  -ms-border-radius: 3px;
   border-radius: 3px;
   border-style: solid;
   border-color: #ccc;
@@ -213,14 +242,17 @@ img.tradewinds-logo {
 
 .social-wrapper {
   width: 80%;
+  display: -ms-flexbox;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  -ms-flex-pack: justify;
   justify-content: space-around;
 }
 
 a.social-link {
   color: #5a5a5a;
+  -ms-transition: 0.3s ease-in-out;
   transition: .3s ease-in-out;
 }
 
@@ -234,6 +266,7 @@ a.social-link:hover {
   width:50%;
   background: url(../img/beach.jpg) no-repeat center center;
   background-size: cover;
+  -ms-border-radius: 3px 0 0 3px;
   border-radius: 3px 0 0 3px;
 }
 
@@ -243,8 +276,10 @@ a.social-link:hover {
   height: 350px;
   background: url(../img/code.jpg) no-repeat center center;
   background-size: cover;
+  display: -ms-flexbox;
   display: flex;
   flex-direction: column;
+  -ms-flex-pack: justify;
   justify-content: center;
   text-align: center;
 }
@@ -260,22 +295,27 @@ a.social-link:hover {
   width:50%;
   background: url(../img/coast.jpg) no-repeat center center;
   background-size: cover;
+  -ms-border-radius: 3px 0 0 3px;
   border-radius: 3px 0 0 3px;
 }
 
 /* Calculator Content Wrapper */
 .calculator-content-wrapper {
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   flex-direction: row;
+  -ms-flex-pack: justify;
   justify-content: space-around;
 }
 
 /* Information Container Section */
 #information-container {
   width: 50%;
+  display: -ms-flexbox;
   display: flex;
   flex-direction: column;
+  -ms-flex-pack: justify;
   justify-content: center;
   padding: 30px;
 }
@@ -296,8 +336,10 @@ a.social-link:hover {
 /* Calculator Container Section */
 #calculator-container {
   width: 50%;
+  display: -ms-flexbox;
   display: flex;
   flex-direction: column;
+  -ms-flex-pack: justify;
   justify-content: flex-start;
   padding: 30px;
 }
@@ -319,7 +361,8 @@ a.social-link:hover {
 .form-wrapper input[type=text] {
   height: 22px;
   width: 100px;
-  border-radius: 2px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
   border: none;
   border-bottom: 2px solid #ccc;
   padding: 2px 0 1px 16px;
@@ -333,7 +376,8 @@ a.social-link:hover {
   -webkit-appearance: none;
   -moz-appearance: checkbox;
   appearance: none;
-  border-radius: 2px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
   border: 2px solid #ccc;
   height: 22px;
   width: 22px;
@@ -355,8 +399,10 @@ a.social-link:hover {
 
 .min-max-wrapper {
   width: 80%;
+  display: -ms-flexbox;
   display: flex;
   flex-direction: row;
+  -ms-flex-pack: justify;
   justify-content: space-around;
   margin-bottom: 20px;
 }
@@ -401,23 +447,29 @@ footer {
   /* Navigation */
 
   .header-container {
-    width: 80%;
+    width: 100%;
     margin: auto;
+    padding: 0 20px;
   }
 
   nav.branding {
     flex-direction: row;
+    padding-right: 50px;
   }
 
   img.tradewinds-logo {
     height: 40px;
     margin-top: 20px;
+    width: 100%;
   }
 
-  .brand-title {
-    font-size: 36px;
-    line-height: 36px;
-    margin-top: 22px;
+  .logo-md {
+    display: block;
+  }
+
+  .logo-lg,
+  .logo-sm {
+    display: none;
   }
 
   .desktop-menu {
@@ -428,6 +480,7 @@ footer {
   }
 
   .mobile-nav-toggle {
+    display: -ms-flexbox;
     display: flex;
     flex-direction: column;
   }
@@ -470,6 +523,7 @@ footer {
   #hero {
     width:100%;
     height: 400px;
+    -ms-border-radius: 0;
     border-radius: 0;
   }
 
@@ -487,12 +541,14 @@ footer {
   #contact-hero {
     width:100%;
     height: 400px;
+    -ms-border-radius: 0;
     border-radius: 0;
   }
 
   /* Calculator Content Wrapper */
   .calculator-content-wrapper {
     flex-direction: column-reverse;
+    -ms-flex-pack: justify;
     justify-content: center;
   }
 
@@ -522,6 +578,11 @@ footer {
     line-height: 18px;
   }
 
+  /* Contact Section */
+  .social-wrapper {
+    margin: 0 auto;
+  }
+
   /* Footer Section */
 
   footer {
@@ -531,8 +592,12 @@ footer {
 }
 
 @media screen and (max-width: 568px) {
+  .logo-sm {
+    display: block;
+  }
 
-  .tradewinds-logo {
+  .logo-lg,
+  .logo-md {
     display: none;
   }
 
