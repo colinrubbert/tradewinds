@@ -74,15 +74,18 @@ nav.branding {
   flex-direction: row;
 }
 
+.branding-title {
+	font-size: 48px;
+	font-family: "Lato", sans-serif;
+	font-style: italic;
+	margin-top: 16px;
+	padding-left: 10px;
+}
+
 img.tradewinds-logo {
   height: 60px;
   margin-top: 10px;
   cursor: pointer;
-}
-
-.logo-md,
-.logo-sm {
-  display: none;
 }
 
 .desktop-menu {
@@ -460,16 +463,12 @@ footer {
   img.tradewinds-logo {
     height: 40px;
     margin-top: 20px;
-    width: 100%;
   }
 
-  .logo-md {
-    display: block;
-  }
-
-  .logo-lg,
-  .logo-sm {
-    display: none;
+  .branding-title {
+    margin-top: 22px;
+    font-size: 36px;
+    line-height: 36px;
   }
 
   .desktop-menu {
@@ -592,13 +591,17 @@ footer {
 }
 
 @media screen and (max-width: 568px) {
-  .logo-sm {
-    display: block;
+  img.tradewinds-logo {
+    display: none;
+    height: 40px;
+    margin-top: 20px;
   }
 
-  .logo-lg,
-  .logo-md {
-    display: none;
+  .branding-title {
+    margin-top: 22px;
+    font-size: 36px;
+    line-height: 36px;
+    padding: 0;
   }
 
   .cta-form input {
